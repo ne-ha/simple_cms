@@ -16,7 +16,6 @@ class SubjectsController < ApplicationController
 
   def create
     @subject = Subject.new(subject_params)
-    @subject.save
     if @subject.save
       flash[:notice] = "Subject created successfully."
       redirect_to(:action => 'index')
