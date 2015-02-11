@@ -3,7 +3,7 @@
 <table summary="Section form fields">
   <tr>
     <th><%= f.label(:page_id, "Page") %></th>
-    <td><%= f.text_field(:page_id , @pages.collect {|p| [p.name , p.id]}) %></td>
+    <td><%= f.select(:page_id , @pages.collect {|p| [p.name , p.id]}) %></td>
   </tr>
   <tr>
     <th><%= f.label(:name, "Name") %></th>
@@ -15,7 +15,7 @@
   </tr>
   <tr>
     <th><%= f.label(:visible) %></th>
-    <td><%= f.text_field(:visible) %></td>
+    <td><%= f.check_box(:visible) %></td>
   </tr>
   <tr>
     <th><%= f.label(:content_type) %></th>
